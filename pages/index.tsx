@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import MainPage from '../components/MainPage'
 import Navbar from '../components/Navbar'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
 
       <Navbar></Navbar>
+      <MainPage></MainPage>
     </div>
   )
 }

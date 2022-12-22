@@ -1,13 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, {useState} from 'react'
+import {AiOutlineCloseCircle, AiOutlineMenu, AiOutlineMail} from 'react-icons/ai'
+import {FaLinkedin, FaGithubSquare } from 'react-icons/fa'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 const Navbar = () => {
+
+  const [sideNav, setSideNav] = useState(false);
+
+  const handleNav = () => {
+    setSideNav(!sideNav);
+  }
+
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100]'>
+      <div className='fixed w-full h-20 shadow-xl z-[100]'>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-          Chen Tzen
-          {/* <Image src='/../public/assets/Chen_Logo.png' alt='' width='80' height='30' /> */}
+          <Image src='/../public/assets/Chen_Logo_NavBar.png' alt='/' width='80' height='30' />
           <div>
             <ul className='hidden md:flex'>
                 <Link href='/'>
@@ -29,10 +38,69 @@ const Navbar = () => {
                 <Link href='/#contact'>Contact</Link>
               </li>
             </ul>
+            <div onClick={handleNav} className='md:hidden'>
+              <AiOutlineMenu size={25}/>
+            </div>
           </div>
         </div>
-    </div>
-  )
+
+        <div className={ sideNav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ' : ''}>
+          <div className={ sideNav 
+            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+            : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+          }>
+            <div>
+              <div className='flex w-full items-center justify-between'>
+                <Image src='/../public/assets/Chen_Logo_NavBar.png' alt='/' width='90' height='40' />
+                <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
+                  <AiOutlineCloseCircle/>
+                </div>
+              </div>
+              <div className='border-b border-gray-300 my-4'>
+                <p className='w-[85%] md:w-[90%] py-4'> 2nd Year Computer Science at UCLA</p>
+              </div>
+            </div>
+
+            <div>
+              <ul className='uppercase'>
+                <Link href='/'>
+                  <li className='py-4 text-sm'>Home</li>
+                </Link>
+                <Link href='/'>
+                  <li className='py-4 text-sm'>About</li>
+                </Link>
+                <Link href='/'>
+                  <li className='py-4 text-sm'>Skills</li>
+                </Link>
+                <Link href='/'>
+                  <li className='py-4 text-sm'>Projects</li>
+                </Link>
+                <Link href='/'>
+                  <li className='py-4 text-sm'>Contact</li>
+                </Link>
+              </ul>
+              <div className='pt-40'>
+                <p className='uppercase tracking-widest text-[#5651ef]'>Let's Connect</p>
+                <div className='flex items-center justify-between my-4 sm:w-[80%]'>
+                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaLinkedin/>
+                  </div>
+                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaGithubSquare/>
+                  </div>
+                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <AiOutlineMail/>
+                  </div>
+                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <BsFillPersonLinesFill/>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+    )
 }
 
 export default Navbar
