@@ -1,41 +1,84 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {AiOutlineCloseCircle, AiOutlineMenu, AiOutlineMail} from 'react-icons/ai'
 import {FaLinkedin, FaGithubSquare } from 'react-icons/fa'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
+import {BsFillPersonLinesFill, BsMoonFill, BsFillSunFill} from 'react-icons/bs'
+import {useTheme} from 'next-themes'
 
 const Navbar = () => {
 
   const [sideNav, setSideNav] = useState(false);
-
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [shadow, setShadow] = useState(false);
+ 
   const handleNav = () => {
     setSideNav(!sideNav);
   }
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+    setMounted(true);
+  }, []);
+
+  const renderThemeChanger = () => {
+    if(!mounted) return null;
+
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+    
+    if(currentTheme === 'dark') {
+      return (
+        <BsFillSunFill size={18}  onClick={() => setTheme('light')} />
+      )
+    } else {
+      return (
+
+        <BsMoonFill size={18}  onClick={() => setTheme('dark')} />
+      )
+    }
+
+  }
+
   return (
-      <div className='fixed w-full h-20 shadow-xl z-[100]'>
+      <div className={
+        shadow
+          ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
+          : 'fixed w-full h-20 z-[100]'
+      }>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-          <Image src='/../public/assets/Chen_Logo_NavBar.png' alt='/' width='80' height='30' />
+          <Link href='/'>
+            <Image src='/../public/assets/Chen_Logo_NavBar.png' alt='/' width='80' height='30' />
+          </Link>
           <div>
             <ul className='hidden md:flex'>
-                <Link href='/'>
-                  <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
-                </Link>
-                <Link href='/#about'>
-                  <li className='ml-10 text-sm uppercase hover:border-b'> About </li>
-                </Link>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
-                <Link href='/#skills'>Skills</Link>
-              </li>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/'>
+                <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>Home</li>
+              </Link>
+              {/* <Link href='/#about'>
+                <li className='ml-10 mt-5 text-sm uppercase hover:border-b'> About </li>
+              </Link>
+              <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
+                <Link href='/#experiences'>Experiences</Link>
+              </li> */}
+              <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
                 <Link href='/#projects'>Projects</Link>
               </li>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
+              {/* <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
                 <Link href='/resume'>Resume</Link>
-              </li>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
+              </li> */}
+              <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
                 <Link href='/#contact'>Contact</Link>
+              </li>
+              <li className='ml-10 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                {renderThemeChanger()}
               </li>
             </ul>
             <div onClick={handleNav} className='md:hidden'>
@@ -45,8 +88,9 @@ const Navbar = () => {
         </div>
 
         <div className={ sideNav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ' : ''}>
-          <div className={ sideNav 
-            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+          <div 
+          className={ sideNav 
+            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#808080] p-10 ease-in duration-500'
             : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }>
             <div>
@@ -64,19 +108,19 @@ const Navbar = () => {
             <div>
               <ul className='uppercase'>
                 <Link href='/'>
-                  <li className='py-4 text-sm'>Home</li>
+                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Home</li>
                 </Link>
-                <Link href='/'>
-                  <li className='py-4 text-sm'>About</li>
+                {/* <Link href='/#about'>
+                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>About</li>
                 </Link>
-                <Link href='/'>
-                  <li className='py-4 text-sm'>Skills</li>
+                <Link href='/#experiences'>
+                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Experiences</li>
+                </Link> */}
+                <Link href='/#projects'>
+                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Projects</li>
                 </Link>
-                <Link href='/'>
-                  <li className='py-4 text-sm'>Projects</li>
-                </Link>
-                <Link href='/'>
-                  <li className='py-4 text-sm'>Contact</li>
+                <Link href='/#contact'>
+                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Contact</li>
                 </Link>
               </ul>
               <div className='pt-40'>

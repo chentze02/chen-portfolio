@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
@@ -5,8 +6,11 @@ import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 function MainPage() {
   return (
-    <div className='w-full h-screen text-center'>
-      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
+    <div id='about' className='w-full h-screen text-center'>
+      <div className='flex flex-col justify-center items-center'>
+        <Image src="/../public/assets/Chen_Headshot.jpeg" width='300' height='240' className="rounded-full" alt='/'/>
+        
+        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <h1> 
             Hello, I'm <span className='text-[#89CFF0]'> Chen Tzen</span> 
@@ -31,6 +35,7 @@ function MainPage() {
               <BsFillPersonLinesFill/>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
