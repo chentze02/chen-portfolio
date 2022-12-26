@@ -2,9 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@keyframes smoothscroll1 {
+  from, to { scroll-behavior: smooth; }
+}
+
+@keyframes smoothscroll2 {
+  from, to { scroll-behavior: smooth; }
+}
+
+html {
+  animation: smoothscroll1 1s;
+}
+
+html:focus-within {
+  animation-name: smoothscroll2;
+  scroll-behavior: smooth;
+}
+
 @layer base{
   body{
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    @apply  dark:bg-black dark:text-gray-100 bg-[#ecf0f3] text-[#204373] tracking-wide
   }
 
   h1, h2, h3, h4, h5, h6{
