@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import SuperPeach from '../public/assets/SuperPeachSis_Gif_AdobeExpress.gif';
-import LinkUpImg from '../public/assets/LinkUpDemo.gif'
-import netflixImg from '../public/assets/Chen_Headshot.jpeg'
-import twitchImg from '../public/assets/Chen_Headshot.jpeg'
+import sigmaImg from '../public/assets/SigmaX.png'
+import bankImg from '../public/assets/BankTicket.png'
+import timetableImg from '../public/assets/Timetable.png'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -15,33 +15,65 @@ const Projects = () => {
           Projects
         </p>
         <h2 className='py-4'>What I&apos;ve Built</h2>
-        <div className='grid md:grid-cols-2 gap-8'>
-          <ProjectItem
+        <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 py-20 pb-40'>
+
+        <div className='relative flex flex-auto flex-wrap items-center justify-center h-fit w-fit shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
+        <video autoPlay loop muted className='rounded-xl group-hover:opacity-10 stretch'>
+        <source src="/assets/LinkUpDemo.mp4" type="video/mp4" />
+        </video>
+        <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+        <h3 className='text-2xl text-white tracking-wider text-center'>LinkUp</h3>
+        <p className='pb-4 pt-2 text-white text-center'>React Native, AWD Amplify</p>
+        <Link href='/linkup'>
+            <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>More Info</p>
+        </Link>
+        </div>
+        </div>
+
+        <ProjectItem
+            title='SigmaX'
+            backgroundImg={sigmaImg}
+            projectUrl='/sigmaX'
+            tech='React Native, Python'
+
+        />
+
+        <div className='relative flex flex-auto flex-wrap items-center justify-center h-fit w-fit shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
+            <video autoPlay loop muted className='rounded-xl group-hover:opacity-10 stretch'>
+            <source src="/assets/SuperPeachSis.webm" type="video/webm" />
+            </video>
+            <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+            <h3 className='text-2xl text-white tracking-wider text-center'>Super Peach Sister Game</h3>
+            <p className='pb-4 pt-2 text-white text-center'>C/C++</p>
+            <Link href='/superPeach'>
+                <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>More Info</p>
+            </Link>
+            </div>
+        </div>
+
+        {/* <ProjectItem
             title='Super Peach Sister Game'
             backgroundImg={SuperPeach}
             projectUrl='/superPeach'
             tech='C/C++'
-          />
+          /> */}
+
           <ProjectItem
-            title='LinkUp'
-            backgroundImg={LinkUpImg}
-            projectUrl='/linkup'
-            tech='React Native, AWS Amplify'
-          />
-          <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
-            projectUrl='/netflix'
+            title='Bank Ticket Counter'
+            backgroundImg={bankImg}
+            projectUrl='/bankCounter'
             tech='React JS'
 
           />
-          <ProjectItem
-            title='Twitch UI'
-            backgroundImg={twitchImg}
-            projectUrl='/twitch'
-            tech='Next JS'
+
+        <ProjectItem
+            title='Timetable Calender'
+            backgroundImg={timetableImg}
+            projectUrl='/timetable'
+            tech='React JS'
 
           />
+
         </div>
       </div>
     </div>

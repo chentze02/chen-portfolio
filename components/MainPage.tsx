@@ -18,21 +18,30 @@ function MainPage() {
           <h1 className='py-2 text-gray-700'> An Aspiring Software Engineer </h1>
           <p>
             I'm currently a sophomore at UCLA studying Computer Science. Last summer, I was an intern at Quickdesk on the Chatbot Development team. 
-            Previously, I was a research intern at HCI Research @ UCLA working on Explainable AI projects.
+            I am also currently part of the OnCampus team at UCLA DevX as a full-stack developer.
             I’m currently interested in full-stack web development, mobile development, big data, and NLP. I am excited to explore new areas as well!
           </p>
           <div className='flex items-center justify-between py-8 max-w-[330px] m-auto sm:w-[80%]'>
+            <a href='https://www.linkedin.com/in/chentzen02/'>
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <FaLinkedin/>
+              </div>
+            </a>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-              <FaLinkedin/>
+              
+              <a href='https://github.com/chentze02'>
+                <FaGithubSquare/>
+              </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-              <FaGithubSquare/>
+              <a href='mailto:chentzen02@g.ucla.edu'>
+                <AiOutlineMail/>
+              </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-              <AiOutlineMail/>
-            </div>
-            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-              <BsFillPersonLinesFill/>
+              <a href='https://drive.google.com/file/d/1m_nursoPz0HOpe7i7c7_U2KyByrCuVsC/view?usp=sharing'>
+                <BsFillPersonLinesFill/>
+              </a>
             </div>
           </div>
         </div>

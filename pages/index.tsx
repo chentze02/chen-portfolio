@@ -17,8 +17,7 @@ export default function Home() {
     //   <Navbar></Navbar>
       // <div className='p-60'>
       <div>
-        <Navbar></Navbar>
-        <div className='p-60'>
+        <div className='pt-60'>
           <MainPage></MainPage>
         </div>
         <Projects></Projects>
