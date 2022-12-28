@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Contact from '../components/Contact'
+import Experiences from '../components/Experiences'
 import MainPage from '../components/MainPage'
 import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
@@ -20,6 +21,7 @@ export default function Home() {
         <div className='pt-60'>
           <MainPage></MainPage>
         </div>
+        <Experiences></Experiences>
         <Projects></Projects>
         <Contact></Contact>
       </div>

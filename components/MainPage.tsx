@@ -8,7 +8,7 @@ function MainPage() {
   return (
     <div id='about' className='w-full h-screen text-center'>
       <div className='flex flex-col justify-center items-center'>
-        <Image src="/../public/assets/Chen_Headshot.jpeg" width='300' height='240' className="rounded-full" alt='/'/>
+        <Image src="/assets/Chen_Headshot.jpeg" width='300' height='240' className="rounded-full" alt='/'/>
         
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>

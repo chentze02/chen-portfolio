@@ -19,10 +19,9 @@ const Navbar = () => {
 
   useEffect(() => {
     if (
-      router.asPath === '/property' ||
-      router.asPath === '/crypto' ||
-      router.asPath === '/netflix' ||
-      router.asPath === '/twitch'
+      router.asPath === '/superPeach' ||
+      router.asPath === '/timetable' ||
+      router.asPath === '/bankCounter' 
     ) {
       setNavBg('transparent');
       setLinkColor('#ecf0f3');
@@ -76,27 +75,24 @@ const Navbar = () => {
       }>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
           <Link href='/'>
-            <Image src='/../public/assets/Chen_Logo_NavBar.png' alt='/' width='100' height='40' />
+            <Image src='/assets/Chen_Logo_NavBar.png' alt='/' width='100' height='40' />
           </Link>
           <div>
             <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
               <Link href='/'>
                 <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>Home</li>
               </Link>
-              {/* <Link href='/#about'>
-                <li className='ml-10 mt-5 text-sm uppercase hover:border-b'> About </li>
-              </Link>
               <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
                 <Link href='/#experiences'>Experiences</Link>
-              </li> */}
+              </li> 
               <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
                 <Link href='/#projects'>Projects</Link>
               </li>
               <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
-                <Link href='https://drive.google.com/file/d/1m_nursoPz0HOpe7i7c7_U2KyByrCuVsC/view?usp=sharing'>Resume</Link>
+                <Link href='/#contact'>Contact</Link>
               </li>
               <li className='ml-10 mt-5 text-sm uppercase hover:border-b'>
-                <Link href='/#contact'>Contact</Link>
+                <Link href='https://drive.google.com/file/d/1m_nursoPz0HOpe7i7c7_U2KyByrCuVsC/view?usp=sharing'>Resume</Link>
               </li>
               <li className='ml-10 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                 {renderThemeChanger()}
@@ -116,7 +112,7 @@ const Navbar = () => {
           }>
             <div>
               <div className='flex w-full items-center justify-between'>
-                <Image src='/../public/assets/Chen_Logo_NavBar.png' alt='/' width='90' height='40' />
+                <Image src='/assets/Chen_Logo_NavBar.png' alt='/' width='90' height='40' />
                 <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                   <AiOutlineCloseCircle/>
                 </div>
@@ -131,17 +127,17 @@ const Navbar = () => {
                 <Link href='/'>
                   <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Home</li>
                 </Link>
-                {/* <Link href='/#about'>
-                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>About</li>
-                </Link>
                 <Link href='/#experiences'>
                   <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Experiences</li>
-                </Link> */}
+                </Link> 
                 <Link href='/#projects'>
                   <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Projects</li>
                 </Link>
                 <Link href='/#contact'>
                   <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Contact</li>
+                </Link>
+                <Link href='https://drive.google.com/file/d/1m_nursoPz0HOpe7i7c7_U2KyByrCuVsC/view?usp=sharing'>
+                  <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Resume</li>
                 </Link>
               </ul>
               <div className='pt-40'>

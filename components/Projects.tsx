@@ -51,12 +51,6 @@ const Projects = () => {
             </div>
         </div>
 
-        {/* <ProjectItem
-            title='Super Peach Sister Game'
-            backgroundImg={SuperPeach}
-            projectUrl='/superPeach'
-            tech='C/C++'
-          /> */}
 
           <ProjectItem
             title='Bank Ticket Counter'
