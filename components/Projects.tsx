@@ -42,7 +42,7 @@ const Projects = () => {
 
         <div className='relative flex flex-auto flex-wrap items-center justify-center h-fit w-fit shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
             <video autoPlay loop muted className='rounded-xl group-hover:opacity-10 stretch'>
-            <source src="/assets/SuperPeachSis.webm" type="video/webm" />
+            <source src="/assets/SuperPeachSis.mp4" type="video/mp4" />
             </video>
             <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
             <h3 className='text-2xl text-white tracking-wider text-center'>Super Peach Sister Game</h3>

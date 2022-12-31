@@ -21,26 +21,25 @@ function MainPage() {
             I am also currently part of the OnCampus team at UCLA DevX as a full-stack developer.
             I’m currently interested in full-stack web development, mobile development, big data, and NLP. I am excited to explore new areas as well!
           </p>
-          <div className='flex items-center justify-between py-8 max-w-[330px] m-auto sm:w-[80%]'>
+          <div className='flex items-center justify-between py-10 max-w-[500px] m-auto sm:w-[80%]'>
               <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
                 <a href='https://www.linkedin.com/in/chentzen02/'>
-                  <FaLinkedin/>
+                  <FaLinkedin size={35}/>
                 </a>
               </div>
-            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-              
+            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>              
               <a href='https://github.com/chentze02'>
-                <FaGithubSquare/>
+                <FaGithubSquare size={35}/>
               </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
               <a href='mailto:chentzen02@g.ucla.edu'>
-                <AiOutlineMail/>
+                <AiOutlineMail size={35}/>
               </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
               <a href='https://drive.google.com/file/d/1m_nursoPz0HOpe7i7c7_U2KyByrCuVsC/view?usp=sharing'>
-                <BsFillPersonLinesFill/>
+                <BsFillPersonLinesFill size={35}/>
               </a>
             </div>
           </div>

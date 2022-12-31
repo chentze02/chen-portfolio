@@ -21,7 +21,9 @@ export default function Home() {
         <div className='pt-60'>
           <MainPage></MainPage>
         </div>
+        <div className='pt-60'>
         <Experiences></Experiences>
+        </div>
         <div className='pt-60'>
         <Projects></Projects>
         </div>

@@ -8,15 +8,11 @@ import ContainerBlock from '../components/ContainerBlock'
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    {/* <ContainerBlock> */}
       <ThemeProvider enableSystem={true} attribute="class">
           <Layout>
-            <ContainerBlock>
             <Component {...pageProps} />
-            </ContainerBlock>
           </Layout>
       </ThemeProvider>
-      {/* </ContainerBlock> */}
 
     </>
 
