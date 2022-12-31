@@ -99,7 +99,7 @@ const Navbar = () => {
               </li>
             </ul>
             <div onClick={handleNav} className='md:hidden'>
-              <AiOutlineMenu size={25} className={theme === 'dark' ? 'text-[#204373]' : ''}/>
+              <AiOutlineMenu size={25} className='dark:text-[#204373]'/>
             </div>
           </div>
         </div>
