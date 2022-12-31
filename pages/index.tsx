@@ -22,7 +22,9 @@ export default function Home() {
           <MainPage></MainPage>
         </div>
         <Experiences></Experiences>
+        <div className='pt-60'>
         <Projects></Projects>
+        </div>
         <Contact></Contact>
       </div>
       

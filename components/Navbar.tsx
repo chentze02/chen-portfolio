@@ -107,7 +107,7 @@ const Navbar = () => {
         <div className={ sideNav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ' : ''}>
           <div 
           className={ sideNav 
-            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#808080] p-10 ease-in duration-500'
+            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#ecf0f3] dark:bg-[#808080] p-10 ease-in duration-500'
             : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }>
             <div>
@@ -123,7 +123,7 @@ const Navbar = () => {
             </div>
 
             <div>
-              <ul className='uppercase'>
+              <ul className='uppercase dark:text-[#242263]'>
                 <Link href='/'>
                   <li onClick={() => setSideNav(false)} className='py-4 text-sm'>Home</li>
                 </Link>
@@ -141,19 +141,27 @@ const Navbar = () => {
                 </Link>
               </ul>
               <div className='pt-40'>
-                <p className='uppercase tracking-widest text-[#5651ef]'>Let's Connect</p>
+                <p className='uppercase tracking-widest dark:text-[#5651ef]'>Let's Connect</p>
                 <div className='flex items-center justify-between my-4 sm:w-[80%]'>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaLinkedin/>
+                    <a href='https://www.linkedin.com/in/chentzen02/'>
+                      <FaLinkedin/>
+                    </a>
                   </div>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithubSquare/>
+                    <a href='https://github.com/chentze02'>
+                      <FaGithubSquare/>
+                    </a>
                   </div>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <AiOutlineMail/>
+                    <a href='mailto:chentzen02@g.ucla.edu'>
+                      <AiOutlineMail/>
+                    </a>
                   </div>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <BsFillPersonLinesFill/>
+                    <a href='https://drive.google.com/file/d/1m_nursoPz0HOpe7i7c7_U2KyByrCuVsC/view?usp=sharing'>
+                      <BsFillPersonLinesFill/>
+                    </a>
                   </div>
                 </div>
               </div>

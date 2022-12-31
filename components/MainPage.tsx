@@ -13,7 +13,7 @@ function MainPage() {
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <h1> 
-            Hello, I'm <span className='text-[#89CFF0]'> Chen Tzen</span> 
+            Hello, I'm <span className='dark:text-[#89CFF0] text-[#5651e5]'> Chen Tzen</span> 
           </h1>
           <h1 className='py-2 text-gray-700'> An Aspiring Software Engineer </h1>
           <p>
@@ -22,11 +22,11 @@ function MainPage() {
             I’m currently interested in full-stack web development, mobile development, big data, and NLP. I am excited to explore new areas as well!
           </p>
           <div className='flex items-center justify-between py-8 max-w-[330px] m-auto sm:w-[80%]'>
-            <a href='https://www.linkedin.com/in/chentzen02/'>
               <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-                <FaLinkedin/>
+                <a href='https://www.linkedin.com/in/chentzen02/'>
+                  <FaLinkedin/>
+                </a>
               </div>
-            </a>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
               
               <a href='https://github.com/chentze02'>

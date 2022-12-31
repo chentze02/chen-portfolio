@@ -27,12 +27,10 @@ const timetable = () => {
         <div className='col-span-4'>
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
-            This app was built using React JS and is fully frontend only. Users
-            are able to click the ticket counter and I made use of React hooks and
-            state to keep track of the variables for it to be updated on both the admin 
-            and users page. When the bank counter is busy it displays a red dot, and the 
-            main screen always show the last number served and taken.
+          <p className='pt-5'>
+            Developed a calender scheduler website similar to when2meet enabling users working in teams to view each other schedules and make plans.
+            Employed Firebase as authentication to create a login and logout page for users.
+            Integrated libraries and used CRUD concepts with Firebase (database) to display calender and individual users' schedules.
           </p>
           <a
             href='https://github.com/chentze02/calender'
@@ -53,10 +51,10 @@ const timetable = () => {
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='text-gray-600 dark:text-[#5651ef] py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> React JS
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='text-gray-600 dark:text-[#5651ef] py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> FireBase
               </p>
             </div>

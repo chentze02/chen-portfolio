@@ -27,12 +27,11 @@ const superPeach = () => {
         <div className='col-span-4'>
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
-            This game was built using C/C++ and is fully frontend only. Users
-            are able to click the ticket counter and I made use of React hooks and
-            state to keep track of the variables for it to be updated on both the admin 
-            and users page. When the bank counter is busy it displays a red dot, and the 
-            main screen always show the last number served and taken.
+          <p className='pt-5'>
+            Constructed a fully functional game similar to Super Mario using Object Oriented Programming in C++. 
+            Planned out game actors based on roles in game to make use of inheritance and polymorphism during implementation
+            Utilized C++ STL containers and functions such as vectors and lists to store game actors. 
+            <span className='text-[#3896b5]'> Contact me if you want to download my executable to try out my game. </span>
           </p>
           <a
             href='https://github.com/chentze02/SuperPeachSisters'
@@ -41,19 +40,12 @@ const superPeach = () => {
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
-          <a
-            href='https://chentze02.github.io/calender/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <button className='px-8 py-2 mt-4'>Demo</button>
-          </a>
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='text-gray-600 dark:text-[#5651ef] py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> C/C++ 
               </p>
             </div>

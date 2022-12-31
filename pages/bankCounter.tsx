@@ -27,7 +27,7 @@ const bankCounter = () => {
         <div className='col-span-4'>
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
+          <p className='pt-5'>
             This app was built using React JS and is fully frontend only. Users
             are able to click the ticket counter and I made use of React hooks and
             state to keep track of the variables for it to be updated on both the admin 
@@ -53,11 +53,8 @@ const bankCounter = () => {
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='text-gray-600 dark:text-[#5651ef] py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> React JS
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google API
               </p>
             </div>
           </div>
