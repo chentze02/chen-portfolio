@@ -8,15 +8,15 @@ function MainPage() {
   return (
     <div id='about' className='w-full h-screen text-center'>
       <div className='flex flex-col justify-center items-center'>
-        <Image src="/assets/Chen_Headshot.jpeg" width='300' height='240' className="rounded-full" alt='/'/>
+        <Image src="/assets/Chen_Headshot.jpeg" width='400' height='300' className="rounded-full" alt='/'/>
         
-        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
+        <div className='max-w-[1240px] pt-10 w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <h1> 
             Hello, I'm <span className='dark:text-[#89CFF0] text-[#5651e5]'> Chen Tzen</span> 
           </h1>
           <h1 className='py-2 text-gray-700'> An Aspiring Software Engineer </h1>
-          <p>
+          <p className='pt-5'>
             I'm currently a sophomore at UCLA studying Computer Science. Last summer, I was an intern at Quickdesk on the Chatbot Development team. 
             I am also currently part of the OnCampus team at UCLA DevX as a full-stack developer.
             I’m currently interested in full-stack web development, mobile development, big data, and NLP. I am excited to explore new areas as well!
