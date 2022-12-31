@@ -24,13 +24,11 @@ const Experiences = () => {
         </li>
 
         <li>
-        - Fixed UI bugs on search results page and implemented a more responsive design to better fit mobile devices (React.js, CSS Flexbox)
-       
+        - Implemented re-usable automated emailing service (Gmail & SMTP) along with user authentication using Passport.js and OAuth2
         </li>
 
         <li>
-        - Created content and published questions for student portal (Cubie & Kportal) used by 5000+ students across Malaysia
-
+        - Devise K8 namespace for individual organization while deploying a Rasa Open Source container behind a service in each namespace
         </li>
           </ul>
          
@@ -54,13 +52,11 @@ const Experiences = () => {
         </li>
 
         <li>
-        - Implemented re-usable automated emailing service (Gmail & SMTP) along with user authentication using Passport.js and OAuth2
-       
+        - Fixed UI bugs on search results page and implemented a more responsive design to better fit mobile devices (React.js, CSS Flexbox)
         </li>
 
         <li>
-        - Devise K8 namespace for individual organization while deploying a Rasa Open Source container behind a service in each namespace
-
+        - Created content and published questions for student portal (Cubie & Kportal) used by 5000+ students across Malaysia
         </li>
           </ul>
          
