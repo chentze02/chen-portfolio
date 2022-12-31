@@ -3,19 +3,20 @@ import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
 import { ThemeProvider } from 'next-themes'
 import { ChakraProvider } from '@chakra-ui/react'
+import ContainerBlock from '../components/ContainerBlock'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    {/* <ChakraProvider theme={theme}> */}
+    {/* <ContainerBlock> */}
       <ThemeProvider enableSystem={true} attribute="class">
           <Layout>
-            {/* <Navbar></Navbar> */}
+            <ContainerBlock>
             <Component {...pageProps} />
-            {/* <Footer></Footer> */}
+            </ContainerBlock>
           </Layout>
       </ThemeProvider>
-    {/* </ChakraProvider> */}
+      {/* </ContainerBlock> */}
 
     </>
 
