@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
@@ -43,6 +44,11 @@ function MainPage() {
               </a>
             </div>
           </div>
+          <Link href='https://github.com/chentze02/chen-portfolio'>
+            <p className='py-3 text-gray-600 dark:text-red-300 underline cursor-pointer'>
+              Check out the source code for this website!
+            </p>
+          </Link>
         </div>
         </div>
       </div>
